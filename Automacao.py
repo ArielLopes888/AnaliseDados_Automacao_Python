@@ -3,10 +3,9 @@ import pyperclip
 import time
 pyautogui.PAUSE = 4
 
-# Passo 1: Entrar no sistema (no nosso caso, entrar no link)
+# Passo 1: Entrar no link
 pyautogui.hotkey("ctrl", "t")
-pyperclip.copy('https://drive.google.com/drive/my-drive')
-#pyautogui.write('https://www.facebook.com/campaign/landing.php?&campaign_id=1661784635&extra_1=s|c|320269343424|b|facebook|&placement=&creative=320269343424&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1661784635%26adgroupid%3D63686354323%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-11403291%26loc_physical_ms%3D1031846%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAiA4KaRBhBdEiwAZi1zzhGSobmiHB0v9fukd0I-CuX3_9WbYtB7P5J4RN_TFD3y1eElahdHFhoCbb4QAvD_BwE')
+pyperclip.copy('https://drive.google.com/drive/my-drive') #você deve estar conectado com a sua conta google no navegador
 pyautogui.hotkey("ctrl", "v")
 pyautogui.press("enter")
 time.sleep(5)
@@ -33,7 +32,7 @@ quantidade = tabela["Quantidade"].sum()
 pyautogui.hotkey("ctrl", "t")
 pyperclip.copy("https://mail.google.com/mail/u/0/#inbox")
 pyautogui.hotkey("ctrl", "v")
-#pyautogui.write('https://mail.google.com/mail/u/0/#inbox')
+pyautogui.write('https://mail.google.com/mail/u/0/#inbox')
 pyautogui.press("enter")
 time.sleep(12)
 
@@ -49,8 +48,8 @@ pyautogui.press("tab") # seleciona o email
 # escreve outro email
 # tab
 pyautogui.press("tab") # pula pro campo de assunto
-pyperclip.copy("AGORA FOOOOI")
-#pyautogui.write("AGORA FOOOI")
+pyperclip.copy("ok")
+pyautogui.write("ok")
 pyautogui.hotkey("ctrl", "v") # escrever o assunto
 pyautogui.press("tab") #pular pro corpo do email
 
@@ -62,10 +61,10 @@ Os dados abaixo são fictícios
 O faturamento de ontem foi de: R${faturamento:,.2f}
 A quantidade de produtos foi de: {quantidade:,}
 
-bjs"""
+Teste ok"""
 
 pyperclip.copy(texto)
-#pyautogui.write(texto)
+pyautogui.write(texto)
 pyautogui.hotkey("ctrl", "v")
 
 # clicar no botão enviar
